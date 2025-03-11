@@ -15,7 +15,7 @@ public class Mudaranimação : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.C))
         {
             Debug.Log("Entrou no W");
             //mudar
@@ -23,17 +23,40 @@ public class Mudaranimação : MonoBehaviour
             controlador.SetTrigger("Muda");
 
         }
-        else if (Input.GetKeyDown(KeyCode.S))
+        else if (Input.GetKeyDown(KeyCode.Z))
+        {
+            controlador.SetTrigger("Desmuda");
+        }
+        else if (Input.GetKeyDown(KeyCode.V))
+        {
+            controlador.SetTrigger("Block");
+        }
+        else if (Input.GetKeyDown(KeyCode.B))
+        {
+            controlador.SetTrigger("Chute");
+        }
+        else if (Input.GetKeyDown(KeyCode.P))
+        {
+            controlador.SetTrigger("Posição");
+        }
+        else if (Input.GetKeyDown(KeyCode.W))
         {
             controlador.SetTrigger("Desmuda");
         }
         else if (Input.GetKeyDown(KeyCode.A))
         {
-            controlador.SetTrigger("Block");
+            controlador.SetTrigger("Desmuda");
+        }
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            controlador.SetTrigger("Desmuda");
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
-            controlador.SetTrigger("Chute");
+            controlador.SetTrigger("Desmuda");
         }
+
+
+
     }
 }
