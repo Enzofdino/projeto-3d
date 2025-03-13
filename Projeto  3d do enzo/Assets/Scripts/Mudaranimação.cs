@@ -39,21 +39,25 @@ public class Mudaranimação : MonoBehaviour
         {
             controlador.SetTrigger("Posição");
         }
-        else if (Input.GetKeyDown(KeyCode.W))
+        else if (Input.GetKey(KeyCode.W))
         {
-            controlador.SetTrigger("Desmuda");
+            controlador.SetTrigger("Andar para frente");
         }
-        else if (Input.GetKeyDown(KeyCode.A))
+        else if (Input.GetKey(KeyCode.A))
         {
-            controlador.SetTrigger("Desmuda");
+            controlador.SetTrigger("Andar para frente");
         }
-        else if (Input.GetKeyDown(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S))
         {
-            controlador.SetTrigger("Desmuda");
+            controlador.SetTrigger("Back");
         }
-        else if (Input.GetKeyDown(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D))
         {
-            controlador.SetTrigger("Desmuda");
+            controlador.SetTrigger("Andar para frente");
+        }
+        if (Input.GetKey(KeyCode.None)) 
+        {
+            controlador.SetTrigger("Posição");
         }
 
 
