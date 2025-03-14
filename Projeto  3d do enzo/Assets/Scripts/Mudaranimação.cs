@@ -55,9 +55,21 @@ public class Mudaranimação : MonoBehaviour
         {
             controlador.SetTrigger("Andar para frente");
         }
+        else if (Input.GetKeyDown(KeyCode.Space))
+        {
+            controlador.SetTrigger("Pular"); 
+            StartCoroutine(PularComDelay()); 
+        }
+
+    
         if (Input.GetKey(KeyCode.None)) 
         {
             controlador.SetTrigger("Posição");
+        }
+        IEnumerator PularComDelay()
+        {
+            yield return new WaitForSeconds(0.5f); 
+            transform.position += new Vector3(0, 15, 0) * Jogador.instance.velocity * Time.deltaTime;
         }
 
 

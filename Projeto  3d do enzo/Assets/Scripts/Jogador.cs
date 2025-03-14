@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Jogador : MonoBehaviour
 {
+    static public Jogador instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
     public Rigidbody player;
     public float velocity = 5f;
     public float rotationSpeed = 100f;
@@ -58,5 +64,6 @@ public class Jogador : MonoBehaviour
         {
             transform.Rotate(0, rotationChange, 0);
         }
+       
     }
 }
