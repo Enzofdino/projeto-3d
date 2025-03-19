@@ -27,6 +27,10 @@ public class Mudaranimação : MonoBehaviour
         {
             controlador.SetTrigger("Desmuda");
         }
+        else if (Input.GetKeyDown(KeyCode.X))
+        {
+            controlador.SetTrigger("Dance");
+        }
         else if (Input.GetKeyDown(KeyCode.V))
         {
             controlador.SetTrigger("Block");
@@ -70,6 +74,7 @@ public class Mudaranimação : MonoBehaviour
         {
             yield return new WaitForSeconds(0.5f); 
             transform.position += new Vector3(0, 15, 0) * Jogador.instance.velocity * Time.deltaTime;
+            gameObject.GetComponent<AudioSource>().Play();
         }
 
 
