@@ -5,7 +5,8 @@ using UnityEngine;
 public class Mudaranimação : MonoBehaviour
 {
     public Transform pos;
-   
+    public AudioClip pulosom;
+    public AudioClip andar;
     public Animator controlador;
 
     void Start()
@@ -27,7 +28,7 @@ public class Mudaranimação : MonoBehaviour
         {
             controlador.SetTrigger("Desmuda");
         }
-        else if (Input.GetKeyDown(KeyCode.X))
+        else if (Input.GetKey(KeyCode.X))
         {
             controlador.SetTrigger("Dance");
         }
@@ -74,7 +75,33 @@ public class Mudaranimação : MonoBehaviour
         {
             yield return new WaitForSeconds(0.5f); 
             transform.position += new Vector3(0, 15, 0) * Jogador.instance.velocity * Time.deltaTime;
+            gameObject.GetComponent<AudioSource>().clip = pulosom;
             gameObject.GetComponent<AudioSource>().Play();
+        }
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            gameObject.GetComponent<AudioSource>().clip = andar;
+            gameObject.GetComponent<AudioSource>().Play();
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            gameObject.GetComponent<AudioSource>().clip = andar;
+            gameObject.GetComponent<AudioSource>().Play();
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            gameObject.GetComponent<AudioSource>().clip = andar;
+            gameObject.GetComponent<AudioSource>().Play();
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            gameObject.GetComponent<AudioSource>().clip = andar;
+            gameObject.GetComponent<AudioSource>().Play();
+        }
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            controlador.SetTrigger("Correr");
+            Jogador.instance.velocity = 5f;
         }
 
 

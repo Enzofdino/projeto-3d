@@ -5599,6 +5599,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pos: {fileID: 1240287981}
+  pulosom: {fileID: 8300000, guid: 100e4c0cb1cc7c1489e0281a2197140d, type: 3}
+  andar: {fileID: 8300000, guid: 287a5f47bb01fbd478ccf9b6626c4282, type: 3}
   controlador: {fileID: 1240287980}
 --- !u!136 &1240287983
 CapsuleCollider:
@@ -5663,7 +5665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1240287984}
-  velocity: 5
+  velocity: 2
   rotationSpeed: 100
   moedasom: {fileID: 8300000, guid: 9d65cbe53ad5480449761707ad891189, type: 3}
   particulaPrefab: {fileID: 1233538971}
@@ -5681,7 +5683,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 100e4c0cb1cc7c1489e0281a2197140d, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -5985,6 +5987,67 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &9052975292431394873
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 228391933031930428, guid: 4b4738ecb552a6441b26fbe7e0c51d3d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.1527
+      objectReference: {fileID: 0}
+    - target: {fileID: 228391933031930428, guid: 4b4738ecb552a6441b26fbe7e0c51d3d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.793
+      objectReference: {fileID: 0}
+    - target: {fileID: 228391933031930428, guid: 4b4738ecb552a6441b26fbe7e0c51d3d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 228391933031930428, guid: 4b4738ecb552a6441b26fbe7e0c51d3d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 228391933031930428, guid: 4b4738ecb552a6441b26fbe7e0c51d3d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 228391933031930428, guid: 4b4738ecb552a6441b26fbe7e0c51d3d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 228391933031930428, guid: 4b4738ecb552a6441b26fbe7e0c51d3d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 228391933031930428, guid: 4b4738ecb552a6441b26fbe7e0c51d3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 228391933031930428, guid: 4b4738ecb552a6441b26fbe7e0c51d3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 228391933031930428, guid: 4b4738ecb552a6441b26fbe7e0c51d3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 963737698394647170, guid: 4b4738ecb552a6441b26fbe7e0c51d3d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411333614702558988, guid: 4b4738ecb552a6441b26fbe7e0c51d3d, type: 3}
+      propertyPath: m_Name
+      value: Espinho
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4b4738ecb552a6441b26fbe7e0c51d3d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -5995,3 +6058,4 @@ SceneRoots:
   - {fileID: 226038270}
   - {fileID: 1233538974}
   - {fileID: 321471629}
+  - {fileID: 9052975292431394873}

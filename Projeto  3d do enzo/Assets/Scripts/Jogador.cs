@@ -11,7 +11,7 @@ public class Jogador : MonoBehaviour
         instance = this;
     }
     public Rigidbody player;
-    public float velocity = 5f;
+    public float velocity = 1f;
     public float rotationSpeed = 100f;
     public AudioClip moedasom;
     public GameObject particulaPrefab; 
