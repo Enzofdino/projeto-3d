@@ -11,6 +11,8 @@ public class Jogador : MonoBehaviour
         instance = this;
     }
     public Rigidbody player;
+    public GameObject gameOverUI;
+    public int vida = 3;
     public float velocity = 1f;
     public float rotationSpeed = 100f;
     public AudioClip moedasom;
@@ -28,6 +30,7 @@ public class Jogador : MonoBehaviour
             Debug.LogError("🚨 ERRO: Moeda Prefab não atribuída no Inspector!");
             return;
         }
+        gameOverUI.SetActive(false);
 
         SpawnMoeda();
     }
@@ -109,6 +112,10 @@ public class Jogador : MonoBehaviour
             }
 
         }
+        if (other.CompareTag("Espinho"))
+        {
+            ReceberDano(1); 
+        }
     }
 
 
@@ -138,5 +145,25 @@ public class Jogador : MonoBehaviour
     {
         yield return new WaitForSeconds(1f); 
         SpawnMoeda();
+    }
+    public void ReceberDano(int dano)
+    {
+        vida -= dano;
+        Debug.Log("Vida restante: " + vida);
+
+        if (vida <= 0)
+        {
+            GameOver();
+        }
+    }
+  
+
+    public  void GameOver()
+    {
+
+        Debug.Log("Game Over!");
+        gameOverUI.SetActive(true); 
+        Time.timeScale = 0;
+
     }
 }

@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Mudaranimação : MonoBehaviour
 {
+  static public Mudaranimação instance;
+    private void Awake()
+    {
+        instance = this;
+    }
     public Transform pos;
     public AudioClip pulosom;
     public AudioClip andar;
@@ -47,18 +52,22 @@ public class Mudaranimação : MonoBehaviour
         else if (Input.GetKey(KeyCode.W))
         {
             controlador.SetTrigger("Andar para frente");
+            Jogador.instance.velocity = 2f;
         }
         else if (Input.GetKey(KeyCode.A))
         {
             controlador.SetTrigger("Andar para frente");
+            Jogador.instance.velocity = 2f;
         }
         else if (Input.GetKey(KeyCode.S))
         {
             controlador.SetTrigger("Back");
+            Jogador.instance.velocity = 2f;
         }
         else if (Input.GetKey(KeyCode.D))
         {
             controlador.SetTrigger("Andar para frente");
+            Jogador.instance.velocity = 2f;
         }
         else if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -74,7 +83,7 @@ public class Mudaranimação : MonoBehaviour
         IEnumerator PularComDelay()
         {
             yield return new WaitForSeconds(0.5f); 
-            transform.position += new Vector3(0, 15, 0) * Jogador.instance.velocity * Time.deltaTime;
+            transform.position += new Vector3(0, 50, 0) * Jogador.instance.velocity * Time.deltaTime;
             gameObject.GetComponent<AudioSource>().clip = pulosom;
             gameObject.GetComponent<AudioSource>().Play();
         }
@@ -103,6 +112,7 @@ public class Mudaranimação : MonoBehaviour
             controlador.SetTrigger("Correr");
             Jogador.instance.velocity = 5f;
         }
+       
 
 
 
